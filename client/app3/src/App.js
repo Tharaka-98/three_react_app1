@@ -6,6 +6,7 @@ function App() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const country =  'Canada';
 
   const handleSignUp = async () => {
     try {
@@ -13,6 +14,7 @@ function App() {
         username,
         email,
         password,
+        country,
       });
 
       if (response.status === 200) {
@@ -32,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Canada Sign Up</h1>
+      <h1>{country} Sign Up</h1>
       <input
         type="text"
         placeholder="Username"
